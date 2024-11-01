@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "deskdropreco"
+version = "0.1.0"
+description = ""
+authors = ["Zsombor Teremy <teremyz21@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ruff = "^0.7.1"
+pre-commit = "^4.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
