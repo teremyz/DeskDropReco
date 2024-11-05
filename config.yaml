@@ -1,0 +1,47 @@
+basic:
+  interactions_path: 'data/users_interactions.csv'
+  articles_path: 'data/shared_articles.csv'
+  top_n: 10
+  split_date: '2017-02-15 00:00:00'
+  artifact_dir: 'model/'
+
+popularity_model:
+  saving_path: 'model/popularity_model.pkl'
+
+
+event_type_strength:
+  VIEW: 1
+  LIKE: 2
+  BOOKMARK: 2.5
+  FOLLOW: 3
+  COMMENT CREATED: 4
+
+matrix_factorization:
+  lr: 0.011806
+  num_epochs: 13
+  emb_dim: 32
+  batch_size: 124
+  init: True
+  bias: True
+  sigmoid: True
+  num_workers: 4
+  device: "cpu"
+
+xgb_params:
+  verbosity: 0
+  silent: True
+  objective: reg:squarederror
+  eval_metric: rmse
+  tree_method: hist
+  n_estimators: 200
+  feature_importances_: gain
+  n_jobs: 6
+  learning_rate: 0.000131
+  max_depth: 11
+  lambda: 1.738364
+  alpha: 1.228702
+  min_child_weight: 0.921946
+  subsample: 0.505566
+  colsample_bytree: 0.478391
+  grow_policy: lossguide
+  max_bin: 468
