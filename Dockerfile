@@ -11,7 +11,7 @@ WORKDIR /app
 COPY ["pyproject.toml", "poetry.lock", "./"]
 
 RUN poetry config virtualenvs.create false
-RUN poetry install
+RUN poetry install --no-dev
 
 RUN mkdir model
 RUN mkdir feature_stores
